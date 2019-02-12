@@ -4,12 +4,14 @@ import { Grid, Form, Segment, Button, Header, Message, Icon } from 'semantic-ui-
 import { Link } from 'react-router-dom'
 
 class Register extends React.Component {
+
     state = {
         username: '',
         email: '',
         password: '',
         passwordConfirmation: ''
     };
+
     handleChange = event => {
         this.setState({
             [event.target.name]: event.target.value
@@ -28,9 +30,9 @@ class Register extends React.Component {
             console.error(err);
         });
     };   
+
     render() {
         const { username, email, password, passwordConfirmation } = this.state;
-
         return (
             <Grid textAlign="center" verticalAlign="middle" className="app">
                 <Grid.Column style={{ maxWidth: 450 }}>
@@ -40,18 +42,38 @@ class Register extends React.Component {
                     </Header>
                     <Form onSubmit={this.handleSubmit} size="large">
                         <Segment stacked>
-                            <Form.Input fluid name="username" icon="mail" iconPosition="left" 
-                            placeholder="Username" onChange={this.handleChange} value={username} type="text" />
-
-                            <Form.Input fluid name="email" icon="user" iconPosition="left" 
-                            placeholder="Email Address" onChange={this.handleChange} value={email} type="email" /> 
-
-                            <Form.Input fluid name="password" icon="lock" iconPosition="left" 
-                            placeholder="Password" onChange={this.handleChange} value={password} type="password" />
-
-                            <Form.Input fluid name="passwordConfirmation" icon="repeat" iconPosition="left" 
-                            placeholder="Password Confirmation" onChange={this.handleChange} value={passwordConfirmation} type="password" />
-
+                            <Form.Input 
+                                fluid name="username" 
+                                icon="mail" 
+                                iconPosition="left" 
+                                placeholder="Username" 
+                                onChange={this.handleChange} 
+                                value={username} 
+                                type="text" />
+                            <Form.Input 
+                                fluid name="email" 
+                                icon="user" 
+                                iconPosition="left" 
+                                placeholder="Email Address" 
+                                onChange={this.handleChange} 
+                                value={email} 
+                                type="email" /> 
+                            <Form.Input 
+                                fluid name="password" 
+                                icon="lock" 
+                                iconPosition="left" 
+                                placeholder="Password" 
+                                onChange={this.handleChange} 
+                                value={password} 
+                                type="password" />
+                            <Form.Input 
+                                fluid name="passwordConfirmation" 
+                                icon="repeat" 
+                                iconPosition="left" 
+                                placeholder="Password Confirmation" 
+                                onChange={this.handleChange} 
+                                value={passwordConfirmation} 
+                                type="password" />
                             <Button color="yellow" fluid size="large">Submit</Button>
                         </Segment>
                     </Form>
