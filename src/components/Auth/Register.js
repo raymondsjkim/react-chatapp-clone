@@ -34,9 +34,9 @@ class Register extends React.Component {
         return (
             <Grid textAlign="center" verticalAlign="middle" className="app">
                 <Grid.Column style={{ maxWidth: 450 }}>
-                    <Header as="h2" icon color="orange" textAlign="center">
-                        <Icon name="handshake outline" color="orange" />
-                        Register for DevChat
+                    <Header as="h2" icon color="yellow" textAlign="center">
+                        <Icon name="comment outline" color="yellow" />
+                        Register for ChatMap
                     </Header>
                     <Form onSubmit={this.handleSubmit} size="large">
                         <Segment stacked>
@@ -46,14 +46,13 @@ class Register extends React.Component {
                             <Form.Input fluid name="email" icon="user" iconPosition="left" 
                             placeholder="Email Address" onChange={this.handleChange} value={email} type="email" /> 
 
-
                             <Form.Input fluid name="password" icon="lock" iconPosition="left" 
                             placeholder="Password" onChange={this.handleChange} value={password} type="password" />
 
                             <Form.Input fluid name="passwordConfirmation" icon="repeat" iconPosition="left" 
                             placeholder="Password Confirmation" onChange={this.handleChange} value={passwordConfirmation} type="password" />
 
-                            <Button color="orange" fluid size="large">Submit</Button>
+                            <Button color="yellow" fluid size="large">Submit</Button>
                         </Segment>
                     </Form>
                     <Message>Already a user? <Link to="/login">Login</Link></Message>
